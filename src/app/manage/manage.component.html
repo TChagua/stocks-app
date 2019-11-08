@@ -1,0 +1,23 @@
+<div class="mdl-grid container">
+  <div class="mdl-cell mdl-cell--4-col">
+    <form (submit)="add()">
+      <input
+        type="text"
+        name="stock"
+        placeholder="Add Stock"
+        [(ngModel)]="stock"
+        class="mdl-textfield__input"
+      />
+    </form>
+    <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <tbody>
+        <tr *ngFor="let symbol of symbols">
+          <td class="mdl-data-table__cell--non-numeric">{{ symbol }}</td>
+          <td style="padding-top: 6px;">
+            <button class="mdl-button" (click)="remove(symbol)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

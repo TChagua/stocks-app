@@ -1,0 +1,21 @@
+<div
+  class="mdl-card stock-card mdl-shadow--2dp"
+  [ngClass]="{ increase: isPositive(), decrease: isNegative() }"
+>
+  <div class="content">
+    <h2>
+      {{ stock?.symbol?.toUpperCase() }}
+    </h2>
+    <p>
+      Price: <span>{{ stock?.lastTradePriceOnly | currency: 'USD':'symbol':'.2' }}</span>
+    </p>
+    <p>
+      Change:
+      <span>
+        {{ stock?.change | currency: 'USD':'symbol':'.2' }} ({{
+          stock?.changeInPercent | percent: '.2'
+        }})
+      </span>
+    </p>
+  </div>
+</div>

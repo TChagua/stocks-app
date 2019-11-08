@@ -1,0 +1,16 @@
+.mdl-grid.container {
+  margin: auto;
+  max-width: 300px;
+
+  > * {
+    width: 100%;
+  }
+
+  form {
+    margin-bottom: 5px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
