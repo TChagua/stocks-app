@@ -7,13 +7,16 @@
       {{ stock?.symbol?.toUpperCase() }}
     </h2>
     <p>
-      Price: <span>{{ stock?.lastTradePriceOnly | currency: 'USD':'symbol':'.2' }}</span>
+      Price:
+      <span>{{
+        stock?.lastTradePriceOnly | currency: "USD":"symbol":".2"
+      }}</span>
     </p>
     <p>
       Change:
       <span>
-        {{ stock?.change | currency: 'USD':'symbol':'.2' }} ({{
-          stock?.changeInPercent | percent: '.2'
+        {{ stock?.change | currency: "USD":"symbol":".2" }} ({{
+          stock?.changeInPercent | percent: ".2"
         }})
       </span>
     </p>
